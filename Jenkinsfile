@@ -9,7 +9,7 @@ node{
    stage('Compile-Package-create-war-file'){
       // Get maven home path
       def mvnHome =  tool name: 'Maven', type: 'maven'   
-      bat "${mvnHome}/bin/mvn package"
+      bat "${mvnHome}/bin/mvn clean install"
       bat "dir target"
       }
 /*   stage ('Stop Tomcat Server') {
@@ -25,7 +25,7 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     bat "copy target\\ICICIbank-1.3.jar \"${tomcatWeb}\\ICICIbank-1.3.jar\""
+     bat "copy target\\intel-1.0-SNAPSHOT.jar \"${tomcatWeb}\\intel-1.0-SNAPSHOT.jar\""
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
