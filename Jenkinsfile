@@ -4,7 +4,7 @@ node{
    def tomcatBin = 'C:\\apache-tomcat-9.0.68\\bin'
    def tomcatStatus = ''
    stage('SCM Checkout'){
-     git 'https://github.com/BSR251196/ICICI_bnk_project.git'
+     git 'https://github.com/Akshithh/Team.git'
    }
    stage('Compile-Package-create-war-file'){
       // Get maven home path
