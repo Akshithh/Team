@@ -10,6 +10,7 @@ node{
       // Get maven home path
       def mvnHome =  tool name: 'Maven', type: 'maven'   
       bat "${mvnHome}/bin/mvn package"
+      bat "dir target"
       }
 /*   stage ('Stop Tomcat Server') {
                bat ''' @ECHO OFF
