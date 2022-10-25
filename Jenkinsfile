@@ -24,7 +24,7 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     bat "copy target\\ICICIbank-1.3.war \"${tomcatWeb}\\ICICIbank-1.3.war\""
+     bat "copy target\\ICICIbank-1.3.jar \"${tomcatWeb}\\ICICIbank-1.3.jar\""
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
